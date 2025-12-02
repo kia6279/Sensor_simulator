@@ -4,7 +4,7 @@ A ROS2 node that simulates a basic sensor by publishing sensor data (e.g., dista
 
 
 #### To Create and Run Ros2 Package in Docker container step by step
-##Step o - Prerequisite
+## Prerequisite
 
 Step o - Install( Ubuntu 22.04, Ros2 Humble(or anyother distrobution) and Docker Engine)
 - You need to have Ubuntu 22.04, Ros2 Humble and docker engine installed
