@@ -1,0 +1,21 @@
+
+FROM osrf/ros:humble-desktop
+
+
+SHELL ["/bin/bash", "-c"]
+
+WORKDIR /app
+
+COPY src onboarding_ws/src
+
+RUN cd onboarding_ws && \
+    source /opt/ros/humble/setup.bash && \
+    colcon build
+
+# #COPY entrypoint.sh /
+COPY docker/entrypoint.sh /
+
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["bash"]
